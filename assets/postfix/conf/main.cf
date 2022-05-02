@@ -34,4 +34,4 @@ inet_protocols = all
 mydomain = example.com
 #smtpd_milters = inet:localhost:3333 
 
-#maillog_file=/dev/stdout
+maillog_file=/dev/stdout

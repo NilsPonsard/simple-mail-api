@@ -2,8 +2,6 @@ FROM debian:11
 
 WORKDIR /app
 
-EXPOSE 8080
-
 # installation et configuration de postfix
 
 RUN apt-get update && \
