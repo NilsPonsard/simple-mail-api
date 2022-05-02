@@ -10,6 +10,7 @@ RUN apt-get update && \
   echo "postfix postfix/mailname string example.com" | debconf-set-selections && \
   echo "postfix postfix/main_mailer_type string 'Internet Site'" | debconf-set-selections && \
   apt-get install postfix supervisor -y
+
 COPY ./assets/postfix/conf/* /etc/postfix/ 
 RUN update-rc.d -f postfix remove
 RUN mkdir -p  /var/log/supervisor
@@ -21,7 +22,6 @@ RUN cp /etc/host.conf /etc/hosts /etc/nsswitch.conf /etc/resolv.conf /etc/servic
 
 EXPOSE 25
 
-USER 1000:1000
+# USER 1000:1000
 
-
-CMD [ "postfix","start-fg" ]
+CMD [ "/bin/sh","-c", "postfix start-fg" ]
