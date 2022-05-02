@@ -1,4 +1,4 @@
-FROM node:lts-bullseye
+FROM debian:11
 
 WORKDIR /app
 
