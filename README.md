@@ -1,2 +1,2 @@
-# simple-mail-api
+# simple-mail-server
 Simple mail api using postfix
